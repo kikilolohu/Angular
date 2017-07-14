@@ -1,0 +1,54 @@
+﻿<button md-raised-button color="warn" (click)="managerlogin()">
+  <font color="white"> Manager Logic</font>
+</button>
+<button md-raised-button color="warn" (click)="employeelogin()">
+  <font color="white"> Employee Logic</font>
+</button>
+<button routerLink="/whatever" md-raised-button color="warn">
+  <font color="white">404 Logic</font>
+</button>
+
+
+<md-card class="login-card">
+    <md-card-content>
+        <div style="width: 100%;">
+            <div style="float:left; width: 55%">
+                <img md-card-image src="assets/Img/loginpageIcon.png">
+            </div>
+            <form style="float:right; width:35%">
+                <p></p>
+              <md-input-container>
+                <b>Employee #:</b>
+              
+                <input mdInput type="text" ng-model="" />
+              </md-input-container>
+
+              <md-input-container>
+                <b>Password:</b>
+                <input mdInput type="password" ng-model=""/>
+              </md-input-container>
+
+                <p></p>
+        <!--      <a *ngIf="MainScreen==1"routerLink="/man-vision" routerLinkActive="active">manager page</a>  -->
+                
+
+                <button md-raised-button color="primary" (click)="LoginAttempt()">
+                  <font color="white">Login</font>
+                </button> 
+<!--
+                <button *ngIf="MainScreen==0" md-raised-button color="primary" (click)="LoginError()">Login</button>
+                <button *ngIf="MainScreen==1" routerLink="/man-vision" md-raised-button color="primary">Login</button>
+                <button *ngIf="MainScreen==2" routerLink="/emp-vision" md-raised-button color="primary">Login</button>
+-->
+                <button md-raised-button color="accent" (click)="LoginError()">
+                    <font color="white"> Cancel </font>
+                </button>
+
+                <md-error *ngIf="loginFailed">
+                    <p>{{loginErrorMessage}}</p>
+                </md-error>
+            </form>
+        </div>
+        <div style="clear:both"></div>
+    </md-card-content>
+</md-card>

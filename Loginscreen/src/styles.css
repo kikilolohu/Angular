@@ -1,0 +1,7 @@
+﻿
+//@include angular-material-theme($candy-app-theme);
+
+body {
+  padding: 6em 0em;
+  background: lightgray;
+}

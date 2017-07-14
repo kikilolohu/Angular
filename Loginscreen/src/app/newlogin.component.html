@@ -1,0 +1,34 @@
+﻿<md-card class="login-card">
+    <md-card-content>
+        <div style="width: 100%;">
+            <div style="float:left; width: 55%">
+                <img md-card-image src="assets/Img/loginpageIcon.png">
+            </div>
+            <div style="float:right; width:35%">
+                <p></p>
+
+                <b>Employee #:</b>
+
+                    <input mdInput type="text" ng-model="" />
+               
+
+
+                <p></p>
+              <a *ngIf="MainScreen==1"routerLink="/man-vision" routerLinkActive="active">manager page</a>
+
+                <button  md-raised-button color="primary" (click)="LoginAttempt()">
+                    <font color="white">Login</font>
+                </button>
+                
+                <button md-raised-button color="accent" (click)="LoginError()">
+                    <font color="white"> Cancel </font>
+                </button>
+
+                <md-error *ngIf="loginFailed">
+                    <p>{{loginErrorMessage}}</p>
+                </md-error>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </md-card-content>
+</md-card>
