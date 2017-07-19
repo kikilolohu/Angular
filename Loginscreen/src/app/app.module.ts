@@ -1,4 +1,5 @@
 ﻿import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -12,7 +13,7 @@ import { EmpVisionComponent } from './emp.vision.component';
 import { ManVisionComponent } from './man.vision.component';
 import { PageNotFoundComponent } from './error.component';
 import {
-    MdButtonModule, MdCardModule, MdInputModule
+    MdButtonModule, MdCardModule, MdInputModule, MdTableModule,
 }from '@angular/material';
 
 import { AppRoutingModule } from './app.routing';
@@ -29,12 +30,14 @@ import { AppRoutingModule } from './app.routing';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    AppRoutingModule,
     MdInputModule,
     MdButtonModule,
     MdCardModule,
-    AppRoutingModule
+    MdTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
